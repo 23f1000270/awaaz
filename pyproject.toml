@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awaaz"
+version = "0.1.0"
+description = "On-device emergency siren detection and direction for drivers and riders"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Divyanshu Sharma"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+train = ["torch>=2.2", "soundfile", "scikit-learn"]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["awaaz"]
+
+[tool.setuptools.package-data]
+awaaz = ["weights.npz"]

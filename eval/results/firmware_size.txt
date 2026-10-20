@@ -1,0 +1,23 @@
+ESP-IDF v5.3.1, target esp32s3, built from firmware/ with sdkconfig.defaults.
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+awaaz.bin binary size 0x56bf0 bytes. Smallest app partition is 0x100000 bytes. 0xa9410 bytes (66%) free.
+
+                            Memory Type Usage Summary                             
+┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Memory Type/Section ┃ Used [bytes] ┃ Used [%] ┃ Remain [bytes] ┃ Total [bytes] ┃
+┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ DIRAM               │       243211 │    71.16 │          98549 │        341760 │
+│    .bss             │       192664 │    56.37 │                │               │
+│    .text            │        39987 │     11.7 │                │               │
+│    .data            │        10560 │     3.09 │                │               │
+│ Flash Data          │       160800 │          │                │               │
+│    .rodata          │       160544 │          │                │               │
+│    .appdesc         │          256 │          │                │               │
+│ Flash Code          │       127480 │          │                │               │
+│    .text            │       127480 │          │                │               │
+│ IRAM                │        16383 │    99.99 │              1 │         16384 │
+│    .text            │        15356 │    93.73 │                │               │
+│    .vectors         │         1027 │     6.27 │                │               │
+│ RTC FAST            │           24 │     0.29 │           8168 │          8192 │
+│    .rtc_reserved    │           24 │     0.29 │                │               │
+└─────────────────────┴──────────────┴──────────┴────────────────┴───────────────┘

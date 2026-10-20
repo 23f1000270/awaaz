@@ -1,0 +1,40 @@
+{
+ "threshold": 0.89,
+ "val_road_clip_false_alarm": 0.05,
+ "test_clips": {
+  "siren": 132,
+  "road": 120
+ },
+ "as_recorded": {
+  "siren_detected": 0.8787878787878788,
+  "median_seconds_to_alarm": 1.552,
+  "road_clips_with_false_alarm": 0.0,
+  "false_alarms_per_hour": 0.0,
+  "road_hours": 0.3370620833333334,
+  "window_auc": 0.9936758866219363
+ },
+ "snr": {
+  "open -10 dB": 0.30303030303030304,
+  "open -5 dB": 0.6287878787878788,
+  "open +0 dB": 0.8863636363636364,
+  "open +5 dB": 0.9166666666666666,
+  "open +10 dB": 0.9242424242424242,
+  "cabin -10 dB": 0.3409090909090909,
+  "cabin -5 dB": 0.6439393939393939,
+  "cabin +0 dB": 0.8257575757575758,
+  "cabin +5 dB": 0.9242424242424242,
+  "cabin +10 dB": 0.9166666666666666
+ },
+ "synthetic_sirens": {
+  "wail +0 dB": 1.0,
+  "wail +10 dB": 1.0,
+  "yelp +0 dB": 1.0,
+  "yelp +10 dB": 1.0,
+  "hilo +0 dB": 0.875,
+  "hilo +10 dB": 0.975
+ },
+ "horns": {
+  "clips": 120,
+  "clips_with_false_alarm": 0.0
+ }
+}

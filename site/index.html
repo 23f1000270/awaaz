@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awaaz siren detector</title>
+  <meta name="description" content="Hears an ambulance siren in your browser, with the same small model that runs on an ESP32-S3. Nothing is recorded or uploaded.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap">
+    <p class="mark">Awaaz <span lang="hi">आवाज़</span></p>
+    <h1>Hears the ambulance before you do.</h1>
+    <p class="lede">A small neural network listens for emergency sirens. It's the same model that runs on a ₹500 ESP32-S3 with two microphones, where it also lights an LED on the side the siren is coming from. Here it runs in this tab. No sound is recorded or uploaded.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="status" id="status" data-state="idle">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="status-text">Not listening</span>
+        <span class="prob" id="prob"></span>
+      </div>
+      <canvas id="spec" width="900" height="240" aria-label="Live spectrogram and siren probability"></canvas>
+      <div class="controls">
+        <button class="btn" id="mic">Use my microphone</button>
+        <button class="btn ghost" id="test">Play a test siren</button>
+        <button class="btn ghost" id="stop" disabled>Stop</button>
+      </div>
+      <p class="hint">To try it for real, play an ambulance siren video on your phone near this device. The test siren is synthetic: a wail mixed into traffic noise, fed straight to the detector and played through your speakers.</p>
+    </section>
+
+    <section class="facts">
+      <h2>How well it works</h2>
+      <p id="results">On 132 held-out siren recordings it raised the alarm for 88%, a median of 1.6 seconds into the clip. It raised no false alarms in 20 minutes of held-out road noise, though that is too little audio to give a reliable false-alarm rate. Mixed into other traffic noise as loud as the siren itself (0 dB), it still caught 89% of sirens. Synthetic wail, yelp and hi-lo sirens, which it never trained on, were caught 88 to 100% of the time. All of this comes from recordings and simulation. Road tests with the hardware come next.</p>
+      <p><a href="https://github.com/23f1000270/awaaz">Source, firmware, test method and limits on GitHub</a></p>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
